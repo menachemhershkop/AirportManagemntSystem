@@ -1,4 +1,4 @@
-import Passenger from "./passenger";
+import Passenger from "./passenger.js";
 
 export default class RegularPassenger extends Passenger{
     constructor(name, IDnumber, AmountOfMoney, workplaice, knowsAnAirportEmployy){
