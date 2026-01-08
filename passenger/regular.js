@@ -9,19 +9,29 @@ export default class RegularPassenger extends Passenger{
         this.knowsAnAirportEmployy = knowsAnAirportEmployy;
 }
        buyTicket(ticket){
+      
+        
         if (ticket.price > this.AmountOfMoney){
+           
+            
             return false
         }
         else {
               if (this.knowsAnAirportEmployy){
                 if(ticket instanceof VipTicket){
+                  
+                    
                     this.AmountOfMoney-=ticket.price*0.85
                 }
                 else{
+                   
+                    
                     this.AmountOfMoney-=ticket.price*0.8
                 }
               }
             else{
+            
+                
                 this.AmountOfMoney-=ticket.price
             }
              return ticket.ownername = this.name;

@@ -5,4 +5,7 @@ export default class Passenger{
         this.IDNumber = IDNumber;
         this.#AmountOfMoney = AmountOfMoney
     }
+    getAmount(){
+        return this.#AmountOfMoney;
+    }
 }

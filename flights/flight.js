@@ -19,8 +19,58 @@ export default class Flight{
 }          
 
     }
-    sellTicket(type){
-        
+    sellTicket(passenger){
+        let flag =false;
+        for (let i=0; i<this.ticketsList.length; i++){
+            if (this.ticketsList[i].getowner()=='null'){
+           
+                
+                if (this.ticketsList[i] instanceof Ticket) {
+                    flag = true
+                  
+                    
+                    return passenger.buyTicket(this.ticketsList[i])
+                }
+                else{
+                    
+                    
+                    flag =true
+                    return "Not regular tickets avilable"
+                }
+            }
+        }
+        if (!flag){
+     
+            
+            return "Not availble tickets"
+        }
+    }
+    sellVipTicket(passenger){
+          let flag =false;
+        for (let i=0; i<this.ticketsList.length; i++){
+            if (this.ticketsList[i].getowner()=='null'){
+               
+                
+                if (this.ticketsList[i] instanceof VipTicket) {
+                   
+                    flag = true
+                    
+                    return passenger.buyTicket(this.ticketsList[i])
+                }
+                else{
+                    console.log(this.ticketsList[i]);
+                    flag = true
+                    
+                    
+                    return "Not VIP tickets avilable"
+                }
+            }
+        }
+        if (!flag){
+           
+            
+            return "Not availble tickets"
+        }
     }
 
 }
