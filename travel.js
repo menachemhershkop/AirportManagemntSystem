@@ -1,5 +1,5 @@
-import RegularPassenger from "./class/regular.js";
-import studentPassenger from "./class/student.js";
+import RegularPassenger from "./passenger/regular.js";
+import studentPassenger from "./passenger/student.js";
 import Airport from "./system/airport.js";
 
 const jfkAirport = new Airport([]);

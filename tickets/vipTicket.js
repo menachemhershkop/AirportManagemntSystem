@@ -1,4 +1,4 @@
-import Ticket from "./ticket.js";
+import Ticket from "../tickets/ticket.js";
 
 export default class VipTicket extends Ticket{
     constructor(price, ownerName){

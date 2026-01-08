@@ -5,4 +5,7 @@ export default class Ticket{
         this.price = price;
         this.#ownerName = ownerName;
     };
+    getowner(){
+        return this.#ownerName;
+    }
 };

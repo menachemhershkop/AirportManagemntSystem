@@ -1,5 +1,6 @@
-import Ticket from "./ticket.js";
-import VipTicket from "./vipTicket.js";
+import Ticket from "../tickets/ticket.js";
+import VipTicket from "../tickets/vipTicket.js";
+
 
 export default class Flight{
     constructor(flightName, arline, flightNumber, maximumNumberOfPassenger, regularTicketPrice, VIPTicketPrice){
@@ -11,13 +12,15 @@ export default class Flight{
         this.VIPTicketPrice = VIPTicketPrice;
         this.ticketsList = [];
     {
-        // for (let i=0; i < this.maximumNumberOfPassenger*0.9;i++){
-        // this.ticketsList.push(new Ticket(this.regularTicketPrice, 'null'))}
+        for (let i=0; i < this.maximumNumberOfPassenger*0.9;i++){
+        this.ticketsList.push(new Ticket(this.regularTicketPrice, 'null'))}
         for (let i=0; i < this.maximumNumberOfPassenger*0.1;i++){
-        this.ticketsList.push(new VipTicket(this.regularTicketPrice, 'null'))}
+        this.ticketsList.push(new VipTicket(this.regularTicketPrice))}
 }          
 
     }
-    // TicketsType()
+    sellTicket(type){
+        
+    }
 
 }
